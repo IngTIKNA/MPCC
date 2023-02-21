@@ -4,7 +4,6 @@ import json
 import argparse
 
 
-
 parser = argparse.ArgumentParser()
 parser.add_argument("address_mapFile")
 args = parser.parse_args()
