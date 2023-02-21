@@ -30,7 +30,7 @@ See the individual instruction for the C++ and Matlab code in the respective fol
 
 ## Example
 
-### Example 03
+### Example 01
 <img src="https://github.com/IngTIKNA/MPCC/blob/master/C%2B%2B/Plotting/sim_scenarios/sim_result01.gif" width="700" />
 
 ### Example 02
@@ -38,6 +38,10 @@ See the individual instruction for the C++ and Matlab code in the respective fol
 
 ### Example 03
 <img src="https://github.com/alexliniger/MPCC/blob/master/Images/MPC_sim.gif" width="700" />
+
+### Example 04  -   1:200 scale Valencia Circuit
+<img src="https://github.com/IngTIKNA/MPCC/blob/master/C%2B%2B/Plotting/sim_scenarios/valencia_miniature.gif" width="700" />
+
 
 ## Papers
 If you use the C++ or Matlab code please cite 
