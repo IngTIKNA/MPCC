@@ -23,6 +23,7 @@
 #include "Model/integrator.h"
 #include "Params/track.h"
 #include "Plotting/plotting.h"
+#include <string>
 
 #include <nlohmann/json.hpp>
 using json = nlohmann::json;
@@ -69,6 +70,7 @@ int main() {
         x0 = integrator.simTimeStep(x0,mpc_sol.u0,jsonConfig["Ts"]);
         log.push_back(mpc_sol);
     }
+
     plotter.plotRun(log,track_xy);
     plotter.plotSim(log,track_xy);
 
@@ -80,9 +82,28 @@ int main() {
         if(log_i.time_total > max_time)
             max_time = log_i.time_total;
     }
+
+
+    std::cerr << "  *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   " << std::endl;
+    std::cerr << " size [ std::list <log> ]  : "  << log.size() << std::endl;
+    std::cerr << "  *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   " << std::endl;
+
+
+    std::string file_path = "mpc_waypoints.csv";
+    std::ofstream log_file(file_path);
+    log_file << "time,pos_x,pos_y" << std::endl;
+
+
+    for(MPCReturn log_i : log)
+    {
+        log_file  <<  log_i.time_total  << "," << log_i.mpc_horizon[0].xk.X  << " , " << log_i.mpc_horizon[0].xk.Y <<  ","  << std::endl;
+    }
+
+
     std::cout << "mean nmpc time " << mean_time/double(jsonConfig["n_sim"]) << std::endl;
     std::cout << "max nmpc time " << max_time << std::endl;
     return 0;
+
 }
 
 

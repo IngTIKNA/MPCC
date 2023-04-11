@@ -188,8 +188,8 @@ void Plotting::plotSim(const std::list<MPCReturn> &log, const TrackPos &track_xy
         plotBox(log_i.mpc_horizon[0].xk);
         plt::plot(plot_x,plot_y,"b-");
         plt::axis("equal");
-        plt::xlim(-3,3);
-        plt::ylim(-3,3);
+        plt::xlim(-30,30);
+        plt::ylim(-25,5);
         plt::pause(0.01);
     }
 }

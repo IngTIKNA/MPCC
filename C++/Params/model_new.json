@@ -14,13 +14,13 @@
   "Cf" 	: 1.2,
   "Df" 	: 0.192,
 
-  "m" 	: 0.200,
-  "Iz" 	: 0.0016,
-  "lf" 	: 0.200,
-  "lr" 	: 0.175,
+  "m" 	: 1810,
+  "Iz" 	: 2500,
+  "lf" 	: 0.029,
+  "lr" 	: 0.033,
 
-  "car_l": 0.375,
-  "car_w": 0.25,
+  "car_l": 0.06,
+  "car_w": 0.03,
 
   "g"   : 9.81,
 
@@ -34,8 +34,8 @@
 
   "maxAlpha" : 0.6,
 
-  "initial_velocity" : 1.0,
-  "s_trust_region" : 0.8,
+  "initial_velocity" : 0.5,
+  "s_trust_region" : 0.2,
 
-  "vx_zero": 0.5
+  "vx_zero": 0.3
 }
